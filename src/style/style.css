@@ -1,10 +1,14 @@
+@font-face {
+  font-family: "bryant-medium";
+  src: url("../font/bryant-medium-webfont.woff") format("woff"), url("../font/bryant-medium-webfont.ttf") format("truetype");
+}
 *{
   margin: 0;
   padding: 0;
+  font-family: "bryant-medium" !important;  
 }
 
 body {
-  font-family: sans-serif;
   font-size: 17px;
 }
 
@@ -99,7 +103,85 @@ header {
 
 .ucluBannerSection {
   display: flex;
-  width: 100%;
+  width: 70%;
   justify-content: center;
-  column-gap: 15%;
+  column-gap: 5%;
+  margin: 25px auto;
+}
+
+.baslik1, .baslik2, .baslik3{
+  text-align: center;
+}
+
+.alanlar {
+  text-align: center;
+  flex: 1;
+  margin: 50px;
+}
+
+.alanlar img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.alanlar h2 {
+  margin-bottom: 20px;
+}
+
+.Banner-Section {
+  background-color: #e8e8e8;
+}
+
+.imageTextSection{
+  display: flex;
+  width: 45%;
+  column-gap: 100px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.imageTextSection img {
+  width: 45%;
+  border-radius: 10px;
+}
+
+.yazi {
+  margin: auto 0;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 300;
+  line-height: 2;
+}
+.logo{
+  display: flex;
+  width:70% ;
+  margin: 35px auto;
+  justify-content: center;
+  column-gap: 79px;
+}
+.yazi2{
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.imageArsivContainer {
+  background-color: var(--fontThemeColor);
+  padding: 50px 0;
+  margin-top: 70px;
+}
+
+.imagearsiv {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.imagearsiv img {
+  width: 300px;
+  margin: 10px;
+}
+
+
+.active{
+  color:#21c1b0 !important;
 }
