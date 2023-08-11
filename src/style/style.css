@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 17px;
+}
+
+:root {
+  --fontThemeColor: #a31c44;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.siteButton {
+  border: 1px solid var(--fontThemeColor);
+  background-color: var(--fontThemeColor);
+  color: #fff;
+  padding: 8px 25px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.siteButton:hover {
+  background-color: #fff;
+  border: 1px solid ;
+  color: var(--fontThemeColor);
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  padding: 20px 50px;
+}
+
+.navs ul {
+  display: flex;
+  color: var(--fontThemeColor);
+  column-gap: 25px;
+}
+
+.navs > ul > li {
+  border-right: 1px solid #a31c44;
+  padding-right: 25px;
+}
+
+.navs > ul > li > a {
+  cursor: pointer;
+}
+
+.navs > ul > li:last-child {
+  border-right: unset;
+}
+
+.bannerText {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 3em;
+  letter-spacing: 1px;
+  position: absolute;
+  left: auto;
+  top: 40%;
+}
+
+.carousel-item {
+  max-height: 680px;
+}
+
+.buttonDiv {
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 58%;
+  font-size: 14x;
+}
+
+.ucluBannerSection {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  column-gap: 15%;
+}
