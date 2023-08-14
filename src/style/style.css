@@ -20,8 +20,8 @@ ul {
   list-style: none;
 }
 
-img {
-  width: 100%;
+a {
+  cursor: pointer;
 }
 
 .siteButton {
@@ -44,7 +44,7 @@ img {
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: space-between;
+  justify-content: space-around !important;
   align-items: center;
 }
 
@@ -128,20 +128,17 @@ header {
   margin-bottom: 20px;
 }
 
-.Banner-Section {
-  background-color: #e8e8e8;
-}
 
 .imageTextSection{
   display: flex;
-  width: 45%;
+  width: 55%;
   column-gap: 100px;
   margin: 0 auto;
   padding: 50px 0;
 }
 
 .imageTextSection img {
-  width: 45%;
+  width: 50%;
   border-radius: 10px;
 }
 
@@ -152,14 +149,19 @@ header {
   font-weight: 300;
   line-height: 2;
 }
-.logo{
+
+.logos img {
+  width: 100%;
+}
+
+.logo {
   display: flex;
-  width:70% ;
+  width: 70%;
   margin: 35px auto;
   justify-content: center;
-  column-gap: 79px;
+  column-gap: 75px;
 }
-.yazi2{
+.yazi2 {
   text-align: center;
   width: 50%;
   margin: 0 auto;
@@ -181,7 +183,172 @@ header {
   margin: 10px;
 }
 
+.social-icons {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
 
+.social-icons i {
+  margin-right: 10px;
+}
+
+.commentSection {
+  margin: 70px auto;
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  column-gap: 10%;
+  align-items: center;
+}
+
+.commentContainer {
+  padding: 25px 40px;
+  flex: 1;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.commentTextArea {
+  text-align: center;
+  flex: 1;
+}
+
+.commentContainer .message-left {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.commentContainer .message-right {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.commentContainer .commentCustomerName {
+  position: absolute;
+  right: 15px;
+  bottom: -30px;
+  color: #a31c44;
+  font-size: 12px;
+}
+
+footer {
+  background-image: linear-gradient(130deg,rgba(163, 28, 68, 1), rgba(35, 31, 32, 0.7)),
+                  url("../images/stylist-materials.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  padding: 35px 50px;
+  background-blend-mode:var(--fontThemeColor);
+}
+
+.footerSub p {
+  font-size:large;
+  text-transform: uppercase;
+}
+.footerSub a :first-child{
+  pointer-events:auto;
+  cursor: pointer;
+}
+.footerSub a {
+    pointer-events: none;
+    cursor: default;
+  font-size:medium;
+  font-weight:lighter;
+}
+.carousel-indicators button {
+  height: 10px !important;
+  width: 10px !important;
+  margin: 0 10px !important;
+  border-radius: 100%;
+  background-color: #ffffff !important;
+}
+.yazi3 {
+  color: #fff;
+  margin: auto 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
 .active{
   color:#21c1b0 !important;
+}
+.btn{
+padding: 0 !important;
+border: 0 !important;
+}
+
+
+@media (max-width: 991px) {
+  .logoClass img {
+      width: 70%;
+      margin-bottom: 15px;
+  }
+
+  .navs ul {
+      column-gap: 5px;
+  }
+
+  .navs > ul > li {
+      margin-right: 10px;
+  }
+
+  .bannerText {
+      font-size: 1.5em;
+  }
+
+  .buttonDiv {
+      font-size: 12px;
+  }
+
+  .ucluBannerSection {
+      flex-wrap: wrap;
+  }
+
+  .alanlar img {
+      width: 80px;
+  }
+
+  .alanlar {
+      margin: 20px 50px;
+  }
+
+  .foto1 {
+      display: none;
+  }
+
+  .imageTextSection {
+      width: 90%;
+      column-gap: 15px;
+  }
+
+  .imagearsiv img {
+      width: 150px;
+  }
+
+  .commentSection {
+      display: block;
+  }
+
+  .commentContainer {
+      margin-bottom: 120px;
+  }
+
+  footer {
+      display: block;
+  }
+
+  .footerSub {
+      margin-bottom: 15px;
+  }
 }

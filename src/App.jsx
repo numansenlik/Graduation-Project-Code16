@@ -1,5 +1,6 @@
 import SiteRoutes from './SiteRoutes'
 import Navbar from './compoments/Navbar'
+import Footer from './compoments/pages/Footer'
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
     <Navbar/>
     <SiteRoutes/>
+    <Footer/>
     </>
   )
 }
