@@ -261,10 +261,8 @@ footer {
   pointer-events:auto;
   cursor: pointer;
 }
-.footerSub a {
-    pointer-events: none;
-    cursor: default;
-  font-size:medium;
+.footerSub span {
+  font-size:18px;
   font-weight:lighter;
 }
 .carousel-indicators button {
