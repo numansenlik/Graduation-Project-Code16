@@ -7,34 +7,18 @@ import Services from './compoments/pages/Services'
 import { Route, Routes } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import productsApi from './customHooks/productsApi'
+import contactsGetApi from './customHooks/contacts/contactsGetApi'
 function SiteRoutes() {
-  const [data, setData] = useState([]);
-
-  async function productsApi() {
-    const options = {
-      method: 'GET',
-      url: 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline',
-    };
-    try {
-      const response = await axios.request(options);
-      await setData(response.data);
-      console.log(response.data.slice(0,32));
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  useEffect(() => {
-    productsApi();
-  }, []);
-
+const productsData = productsApi();
+const contactsData = contactsGetApi();
   return (
     <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path="/meetourteam" element={<MeetOurTeam/>}/>
-    <Route path="/contact" element={<Contact/>}/>
+    <Route path="/contact" element={<Contact contactsData = {contactsData} />}/>
     <Route path="/gallery" element={<Gallery/>}/>
-    <Route path="/products" element={<Products data={data}/>}/>
+    <Route path="/products" element={<Products data={productsData}/>}/>
     <Route path="/services" element={<Services/>}/>
   </Routes>
   )
