@@ -1,3 +1,4 @@
+import Themeicon from '../Themeicon'
 import React from 'react'
 import { Link } from 'react-router-dom'
 function Footer() {
@@ -57,6 +58,7 @@ function Footer() {
           <li><span>to cancel your appointment. Cancellations with less</span></li>
           <li><span>than 24 hours may result in and up to a 100%</span></li>
           <li><span>cancellation fee</span></li>
+          <li><span><Themeicon/></span></li>
         </ul>
       </div>
     </footer>

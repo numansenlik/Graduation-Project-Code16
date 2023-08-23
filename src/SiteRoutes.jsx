@@ -11,12 +11,12 @@ import productsApi from './customHooks/productsApi'
 import contactsGetApi from './customHooks/contacts/contactsGetApi'
 function SiteRoutes() {
 const productsData = productsApi();
-const [data,isActive] = contactsGetApi();
+const [data,isActive,setData] = contactsGetApi();
   return (
     <Routes>
-    <Route path="/" element={<Home/>}/>
+    <Route path="/" element={<Home data={data}/>}/>
     <Route path="/meetourteam" element={<MeetOurTeam/>}/>
-    <Route path="/contact" element={<Contact data = {data} isActive={isActive} />}/>
+    <Route path="/contact" element={<Contact data = {data} isActive={isActive} setData={setData} />}/>
     <Route path="/gallery" element={<Gallery/>}/>
     <Route path="/products" element={<Products data={productsData}/>}/>
     <Route path="/services" element={<Services/>}/>

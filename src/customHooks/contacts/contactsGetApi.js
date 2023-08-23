@@ -27,6 +27,6 @@ useEffect(() => {
   getData();
 }, []);
 
-return [data,isActive]
+return [data,isActive,setData]
 }
 export default contactsGetApi

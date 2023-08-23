@@ -1,0 +1,22 @@
+.write3 {
+  color: $color-white;
+  margin: auto 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.imagearsiv {
+  text-align: center;
+  margin: 25px 0;
+  
+  img {
+    width: 300px;
+    margin: 10px;
+  }
+}
+
+.imageArsivContainer {
+  background-color: $fontThemeColor;
+  padding: 50px 0;
+  margin-top: 70px;
+}

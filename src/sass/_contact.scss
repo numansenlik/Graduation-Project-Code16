@@ -1,0 +1,78 @@
+.bg-custom {
+  background-color: $bag-color-gray !important;
+}
+
+.carousel-indicators-custom {
+  display: flex !important;
+  justify-content: start !important;
+  margin-left: 20px !important;
+
+  button {
+    background-color: $color-white;
+    border-radius: 50% !important;
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 3px !important;
+    border: solid 1px $fontThemeColor !important;
+    cursor: pointer !important;
+
+  }
+  .active {
+    background-color: $fontThemeColor !important ;
+  }
+}
+
+.social-icons {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-icons i {
+  margin-right: 10px;
+}
+
+.commentSection {
+  margin: 70px auto;
+  display: flex;
+  justify-content: center;
+  column-gap: 10%;
+  align-items: center;
+}
+
+.commentContainer {
+  padding: 25px 40px;
+  flex: 1;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.commentTextArea {
+  text-align: center;
+  flex: 1;
+}
+
+.commentContainer .message-left {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.commentContainer .message-right {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.commentContainer .commentCustomerName {
+  right: 15px;
+  bottom: -30px;
+  color: #a31c44;
+  font-size: 12px;
+}

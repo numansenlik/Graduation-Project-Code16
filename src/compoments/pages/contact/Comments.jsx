@@ -2,22 +2,23 @@ import React from 'react'
 
 function Comments(props) {
   const data = props.data
+  console.log(data);
   return (
     <>
-      <div id="carouselExampleCaptions" className="carousel slide">
-        <div className="carousel-indicators">
+      <div id="carouselExampleCaptions" className="carousel slide text-dark">
+        <div className="carousel-indicators carousel-indicators-custom py-0">
 
           {data.map((item, index) => (<button key={index} type="button" className={`${index === 0 && "active"}`} aria-current={`${index === 0 && "true"}`} data-bs-target="#carouselExampleCaptions" data-bs-slide-to={`${index}`} aria-label={`Slide ${index}`}></button>))}
         </div>
         <div className="carousel-inner ">
           {data.map((item, index) => (
             <div key={index} className={`carousel-item ${index === 0 && "active"}`}>
-              <div className="commentContainer ">
+              <div className="commentContainer bg-custom">
                 <img src="./src/images/open-quote.png" className="message-left" alt="message treatment" />
                 <p><strong>{item.comment.title}</strong></p>
                 <p>{item.comment.text}</p>
                 <img src="./src/images/close-quote.png" className="message-right" alt="message treatment" />
-                <span className="commentCustomerName">- {item.name}</span>
+                <span className="commentCustomerName  float-end fs-6 pt-5">- {item.name}</span>
               </div>
             </div>
           ))}

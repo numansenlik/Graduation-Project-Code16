@@ -1,0 +1,126 @@
+header {
+  padding: 20px 50px;
+}
+
+.logo {
+  display: flex;
+  width: 70%;
+  margin: 35px auto;
+  justify-content: center;
+  column-gap: 75px;
+}
+
+.logos img {
+  width: 100%;
+}
+
+.write2 {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.carousel-item {
+  max-height: 680px;
+}
+.siteButton {
+  border: 1px solid $fontThemeColor;
+  background-color: $fontThemeColor;
+  color: #fff;
+  padding: 8px 25px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.siteButton:hover {
+  background-color: #fff;
+  border: 1px solid;
+  color: $fontThemeColor;
+  cursor: pointer;
+}
+
+.commentSection {
+  margin: 70px auto;
+  display: flex;
+  justify-content: center;
+  column-gap: 10%;
+  align-items: center;
+}
+
+.commentTextArea {
+  text-align: center;
+  flex: 1;
+}
+
+.btn {
+  padding: 0 !important;
+  border: 0 !important;
+}
+.card{
+height: 100% !important;
+}
+
+@media (max-width: 991px) {
+  .logoClass img {
+      width: 70%;
+      margin-bottom: 15px;
+  }
+.navs{
+margin-top: 4px;
+}
+  .navs ul {
+      column-gap: 5px;
+
+  }
+
+  .navs > ul > li {
+      margin-right: 10px;
+
+  }
+
+  .bannerText {
+      font-size: 1.5em;
+  }
+
+  .buttonDiv {
+      font-size: 12px;
+  }
+
+  .tripleBannerSection {
+      flex-wrap: wrap;
+  }
+
+  .areas img {
+      width: 80px;
+  }
+
+  .areas {
+      margin: 20px 50px;
+  }
+
+  .foto1 {
+      display: none;
+  }
+
+  .imageTextSection {
+      width: 90%;
+      column-gap: 15px;
+  }
+
+  .imagearsiv img {
+      width: 150px;
+  }
+
+
+  .commentContainer {
+      margin-bottom: 120px;
+  }
+
+  footer {
+      display: block;
+  }
+
+  .footerSub {
+      margin-bottom: 15px;
+  }
+}
+

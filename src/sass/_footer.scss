@@ -1,0 +1,28 @@
+footer {
+  background-image: linear-gradient(130deg, rgba(163, 28, 68, 1), rgba(35, 31, 32, 0.7)),
+    url("../images/stylist-materials.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-white;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  padding: 35px 50px;
+  background-blend-mode: $fontThemeColor;
+}
+
+.footerSub {
+  margin-bottom: 15px;
+  p {
+    font-size:large;
+    text-transform: uppercase;
+  }
+  a :first-child{
+    pointer-events:auto;
+    cursor: pointer;
+  }
+  span {
+    font-size:18px;
+    font-weight:lighter;
+  }
+}

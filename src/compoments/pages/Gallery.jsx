@@ -3,7 +3,7 @@ import React from 'react'
 function Gallery() {
   return (
     <div className="imageArsivContainer container my-0">
-    <div className="yazi3">
+    <div className="write3">
         <h3>What we have been working on:</h3>
       </div>
           <div className="imagearsiv">

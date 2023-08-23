@@ -1,19 +1,11 @@
-@font-face {
-  font-family: "bryant-medium";
-  src: url("../font/bryant-medium-webfont.woff") format("woff"), url("../font/bryant-medium-webfont.ttf") format("truetype");
-}
-*{
+* {
   margin: 0;
   padding: 0;
-  font-family: "bryant-medium" !important;  
+  font-family: "bryant-medium" !important;
 }
 
 body {
   font-size: 17px;
-}
-
-:root {
-  --fontThemeColor: #a31c44;
 }
 
 ul {
@@ -24,20 +16,40 @@ a {
   cursor: pointer;
 }
 
-.siteButton {
-  border: 1px solid var(--fontThemeColor);
-  background-color: var(--fontThemeColor);
-  color: #fff;
-  padding: 8px 25px;
-  text-transform: uppercase;
-  border-radius: 10px;
+[data-bs-theme=dark] {
+  --bs-body-bg: #666666 !important;
 }
 
-.siteButton:hover {
-  background-color: #fff;
-  border: 1px solid ;
-  color: var(--fontThemeColor);
+@font-face {
+  font-family: "bryant-medium";
+  src: url("../font/bryant-medium-webfont.woff") format("woff"), url("../font/bryant-medium-webfont.ttf") format("truetype");
+}
+footer {
+  background-image: linear-gradient(130deg, rgb(163, 28, 68), rgba(35, 31, 32, 0.7)), url("../images/stylist-materials.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  padding: 35px 50px;
+  background-blend-mode: #a31c44;
+}
+
+.footerSub {
+  margin-bottom: 15px;
+}
+.footerSub p {
+  font-size: large;
+  text-transform: uppercase;
+}
+.footerSub a :first-child {
+  pointer-events: auto;
   cursor: pointer;
+}
+.footerSub span {
+  font-size: 18px;
+  font-weight: lighter;
 }
 
 .navbar {
@@ -47,15 +59,15 @@ a {
   justify-content: space-around !important;
   align-items: center;
 }
-
-header {
-  padding: 20px 50px;
+.navbar .active {
+  color: #21c1b0 !important;
 }
 
 .navs ul {
   display: flex;
-  color: var(--fontThemeColor);
-  column-gap: 25px;
+  color: #a31c44;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
 }
 
 .navs > ul > li {
@@ -85,10 +97,6 @@ header {
   top: 40%;
 }
 
-.carousel-item {
-  max-height: 680px;
-}
-
 .buttonDiv {
   width: 100%;
   z-index: 3;
@@ -101,86 +109,50 @@ header {
   font-size: 14x;
 }
 
-.ucluBannerSection {
+.tripleBannerSection {
   display: flex;
   width: 70%;
   justify-content: center;
-  column-gap: 5%;
+  -moz-column-gap: 5%;
+       column-gap: 5%;
   margin: 25px auto;
 }
 
-.baslik1, .baslik2, .baslik3{
-  text-align: center;
-}
-
-.alanlar {
-  text-align: center;
-  flex: 1;
-  margin: 50px;
-}
-
-.alanlar img {
-  width: 120px;
-  margin-bottom: 20px;
-}
-
-.alanlar h2 {
-  margin-bottom: 20px;
-}
-
-
-.imageTextSection{
-  display: flex;
-  width: 55%;
-  column-gap: 100px;
-  margin: 0 auto;
-  padding: 50px 0;
-}
-
-.imageTextSection img {
-  width: 50%;
+.siteButton {
+  border: 1px solid #a31c44;
+  background-color: #a31c44;
+  color: #fff;
+  padding: 8px 25px;
+  text-transform: uppercase;
   border-radius: 10px;
 }
-
-.yazi {
-  margin: auto 0;
-  text-align: center;
-  letter-spacing: 1px;
-  font-weight: 300;
-  line-height: 2;
+.siteButton :hover {
+  background-color: #fff;
+  border: 1px solid;
+  color: #a31c44;
+  cursor: pointer;
 }
 
-.logos img {
-  width: 100%;
+.bg-custom {
+  background-color: #e4e3e3 !important;
 }
 
-.logo {
-  display: flex;
-  width: 70%;
-  margin: 35px auto;
-  justify-content: center;
-  column-gap: 75px;
+.carousel-indicators-custom {
+  display: flex !important;
+  justify-content: start !important;
+  margin-left: 20px !important;
 }
-.yazi2 {
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
+.carousel-indicators-custom button {
+  background-color: #fff;
+  border-radius: 50% !important;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 3px !important;
+  border: solid 1px #a31c44 !important;
+  cursor: pointer !important;
 }
-
-.imageArsivContainer {
-  background-color: var(--fontThemeColor);
-  padding: 50px 0;
-  margin-top: 70px;
-}
-
-.imagearsiv {
-  text-align: center;
-  margin: 25px 0;
-}
-
-.imagearsiv img {
-  width: 300px;
-  margin: 10px;
+.carousel-indicators-custom .active {
+  background-color: #a31c44 !important;
 }
 
 .social-icons {
@@ -198,8 +170,8 @@ header {
   margin: 70px auto;
   display: flex;
   justify-content: center;
-  width: 75%;
-  column-gap: 10%;
+  -moz-column-gap: 10%;
+       column-gap: 10%;
   align-items: center;
 }
 
@@ -233,120 +205,194 @@ header {
 }
 
 .commentContainer .commentCustomerName {
-  position: absolute;
   right: 15px;
   bottom: -30px;
   color: #a31c44;
   font-size: 12px;
 }
 
-footer {
-  background-image: linear-gradient(130deg,rgba(163, 28, 68, 1), rgba(35, 31, 32, 0.7)),
-                  url("../images/stylist-materials.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 100px;
-  padding: 35px 50px;
-  background-blend-mode:var(--fontThemeColor);
-}
-
-.footerSub p {
-  font-size:large;
-  text-transform: uppercase;
-}
-.footerSub a :first-child{
-  pointer-events:auto;
-  cursor: pointer;
-}
-.footerSub span {
-  font-size:18px;
-  font-weight:lighter;
-}
-.carousel-indicators button {
-  height: 10px !important;
-  width: 10px !important;
-  margin: 0 10px !important;
-  border-radius: 100%;
-  background-color: #ffffff !important;
-}
-.yazi3 {
+.write3 {
   color: #fff;
   margin: auto 0;
   text-align: center;
   letter-spacing: 1px;
 }
-.active{
-  color:#21c1b0 !important;
+
+.imagearsiv {
+  text-align: center;
+  margin: 25px 0;
 }
-.btn{
-padding: 0 !important;
-border: 0 !important;
+.imagearsiv img {
+  width: 300px;
+  margin: 10px;
 }
 
+.imageArsivContainer {
+  background-color: #a31c44;
+  padding: 50px 0;
+  margin-top: 70px;
+}
+
+header {
+  padding: 20px 50px;
+}
+
+.logo {
+  display: flex;
+  width: 70%;
+  margin: 35px auto;
+  justify-content: center;
+  -moz-column-gap: 75px;
+       column-gap: 75px;
+}
+
+.logos img {
+  width: 100%;
+}
+
+.write2 {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  max-height: 680px;
+}
+
+.siteButton {
+  border: 1px solid #a31c44;
+  background-color: #a31c44;
+  color: #fff;
+  padding: 8px 25px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.siteButton:hover {
+  background-color: #fff;
+  border: 1px solid;
+  color: #a31c44;
+  cursor: pointer;
+}
+
+.commentSection {
+  margin: 70px auto;
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 10%;
+       column-gap: 10%;
+  align-items: center;
+}
+
+.commentTextArea {
+  text-align: center;
+  flex: 1;
+}
+
+.btn {
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.card {
+  height: 100% !important;
+}
 
 @media (max-width: 991px) {
   .logoClass img {
-      width: 70%;
-      margin-bottom: 15px;
+    width: 70%;
+    margin-bottom: 15px;
   }
-
+  .navs {
+    margin-top: 4px;
+  }
   .navs ul {
-      column-gap: 5px;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
   }
-
   .navs > ul > li {
-      margin-right: 10px;
+    margin-right: 10px;
   }
-
   .bannerText {
-      font-size: 1.5em;
+    font-size: 1.5em;
   }
-
   .buttonDiv {
-      font-size: 12px;
+    font-size: 12px;
   }
-
-  .ucluBannerSection {
-      flex-wrap: wrap;
+  .tripleBannerSection {
+    flex-wrap: wrap;
   }
-
-  .alanlar img {
-      width: 80px;
+  .areas img {
+    width: 80px;
   }
-
-  .alanlar {
-      margin: 20px 50px;
+  .areas {
+    margin: 20px 50px;
   }
-
   .foto1 {
-      display: none;
+    display: none;
   }
-
   .imageTextSection {
-      width: 90%;
-      column-gap: 15px;
+    width: 90%;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
   }
-
   .imagearsiv img {
-      width: 150px;
+    width: 150px;
   }
-
-  .commentSection {
-      display: block;
-  }
-
   .commentContainer {
-      margin-bottom: 120px;
+    margin-bottom: 120px;
   }
-
   footer {
-      display: block;
+    display: block;
   }
-
   .footerSub {
-      margin-bottom: 15px;
+    margin-bottom: 15px;
   }
 }
+.tripleBannerSection {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  -moz-column-gap: 5%;
+       column-gap: 5%;
+  margin: 25px auto;
+}
+
+.areas {
+  text-align: center;
+  flex: 1;
+  margin: 50px;
+}
+.areas img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+.areas h2 {
+  margin-bottom: 20px;
+}
+
+.headers {
+  text-align: center;
+}
+
+.imageTextSection {
+  display: flex;
+  margin: 0 auto;
+  padding: 50px 0;
+  width: 90%;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+.imageTextSection img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.write {
+  margin: auto 0;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 300;
+  line-height: 2;
+}/*# sourceMappingURL=style.css.map */
