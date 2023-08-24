@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Comments from './Comments'
+import Comments from './contact/Comments'
 
 function Home(props) {
   return (
