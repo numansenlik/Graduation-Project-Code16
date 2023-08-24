@@ -1,6 +1,6 @@
 import Home from './compoments/pages/Home'
 import MeetOurTeam from './compoments/pages/MeetOurTeam'
-import Contact from './compoments/pages/Contact/Contact'
+import Contact from './compoments/pages/contact/Contact'
 import Gallery from './compoments/pages/Gallery'
 import Products from './compoments/pages/Products'
 import Services from './compoments/pages/Services'
