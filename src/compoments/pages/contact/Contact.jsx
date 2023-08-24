@@ -1,9 +1,6 @@
 import React from 'react'
-import axios from 'axios';
 import { useState, useEffect } from 'react';
-import contactsGetApi from '../../../customHooks/contacts/contactsGetApi';
-import contacsPutApi from '../../../customHooks/contacts/contacsPutApi';
-import Comments from './Comments';
+import Comments from '../contact/Comments';
 import handleSubmit from '../../../customHooks/contacts/handleSubmit';
 
 function Contact(props) {
