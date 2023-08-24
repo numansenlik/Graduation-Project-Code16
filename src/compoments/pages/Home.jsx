@@ -14,21 +14,21 @@ function Home(props) {
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src="/src/images/bridal-hair.png" className="d-block w-100" alt="..." />
+              <img src="https://i.hizliresim.com/1pu0h8v.png" className="d-block w-100" alt="..." />
               <h3 className="bannerText">Beau Monde Salon and Spa</h3>
               <div className="buttonDiv">
                 <button className="siteButton bannerButton">BOOK A VISIT</button>
               </div>
             </div>
             <div className="carousel-item">
-              <img src="/src/images/bridal-hair.png" className="d-block w-100" alt="..." />
+              <img src="https://i.hizliresim.com/1pu0h8v.png" className="d-block w-100" alt="..." />
               <h3 className="bannerText">Beau Monde Salon and Spa</h3>
               <div className="buttonDiv">
                 <button className="siteButton bannerButton">BOOK A VISIT</button>
               </div>
             </div>
             <div className="carousel-item">
-              <img src="/src/images/bridal-hair.png" className="d-block w-100" alt="..." />
+              <img src="https://i.hizliresim.com/1pu0h8v.png" className="d-block w-100" alt="..." />
               <h3 className="bannerText">Beau Monde Salon and Spa</h3>
               <div className="buttonDiv">
                 <button className="siteButton bannerButton">BOOK A VISIT</button>
@@ -41,13 +41,13 @@ function Home(props) {
         <div>
           <div className="logo">
             <div className="logos logo1">
-              <img src="./src/images/redken.png" alt="lg" />
+              <img  src="https://i.hizliresim.com/cn77di1.png" alt="lg" />
             </div>
             <div className="logos logo2">
-              <img src="./src/images/pureology.png" alt="lg2" />
+              <img src="https://i.hizliresim.com/ezmvz21.png" alt="lg2" />
             </div>
             <div className="logos logo3">
-              <img src="./src/images/farmhouse.png" alt="lg3" />
+              <img src="https://i.hizliresim.com/8ebj7k2.png" alt="lg3" />
             </div>
           </div>
           <div className="write2">

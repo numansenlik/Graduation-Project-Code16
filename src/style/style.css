@@ -225,6 +225,8 @@ footer {
 .imagearsiv img {
   width: 300px;
   margin: 10px;
+  height: 300px;
+  border-radius: 3%;
 }
 
 .imageArsivContainer {
@@ -336,9 +338,6 @@ header {
     width: 90%;
     -moz-column-gap: 15px;
          column-gap: 15px;
-  }
-  .imagearsiv img {
-    width: 150px;
   }
   .commentContainer {
     margin-bottom: 120px;

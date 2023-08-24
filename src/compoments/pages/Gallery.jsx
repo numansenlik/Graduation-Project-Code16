@@ -7,19 +7,19 @@ function Gallery() {
         <h3>What we have been working on:</h3>
       </div>
           <div className="imagearsiv">
-            <img src="./src/images/screen-shot-2022-12-23-at-6-00-26-am.webp" alt="arsv"/>
-            <img src="./src/images/screen-shot-2022-12-23-at-6-03-02-am.png" alt="arsv2"/>
-            <img src="./src/images/screen-shot-2022-12-23-at-6-19-21-am.png" alt="arsv3"/>
+            <img src="https://i.hizliresim.com/krjcftv.png" alt="arsv"/>
+            <img src="https://i.hizliresim.com/omnr8mz.png" alt="arsv2"/>
+            <img src="https://i.hizliresim.com/aoi22uj.png" alt="arsv3"/>
           </div>
           <div className="imagearsiv">
-            <img src="./src/images/screen-shot-2022-12-23-at-6-02-52-am.png" alt="arsv4"/>
-            <img src="./src/images/screen-shot-2022-12-23-at-6-00-56-am.png" alt="arsv5"/>
-            <img src="./src/images/screen-shot-2022-12-23-at-6-03-16-am.png" alt="arsv6"/>
+            <img src="https://i.hizliresim.com/eo92ixy.png" alt="arsv4"/>
+            <img src="https://i.hizliresim.com/4lckfcl.png" alt="arsv5"/>
+            <img src="https://i.hizliresim.com/sugu01x.png" alt="arsv6"/>
           </div>
           <div className="imagearsiv">
-            <img src="./src/images/screen-shot-2022-12-23-at-6-00-56-am.png" alt="arsv7"/>
-            <img src="./src/images/screen-shot-2022-12-23-at-6-03-02-am.png" alt="arsv8"/>
-            <img src="./src/images/screen-shot-2022-12-23-at-6-01-43-am.png" alt="arsv9"/>
+            <img className='new-mage' src="https://images.unsplash.com/photo-1560264641-1b5191cc63e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUyNjl8MHwxfHNlYXJjaHwyfHxoYWlyfGVufDB8fHx8MTY5Mjg0NDgyMHww&ixlib=rb-4.0.3&q=80&w=400" alt="arsv7"/>
+            <img className='new-mage' src="https://images.unsplash.com/photo-1573651235591-221193be5229?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUyNjl8MHwxfHNlYXJjaHwxMHx8aGFpcnxlbnwwfHx8fDE2OTI4NDQ4MjB8MA&ixlib=rb-4.0.3&q=80&w=400" alt="arsv8"/>
+            <img src="https://i.hizliresim.com/s4kjrzt.png" alt="arsv9"/>
           </div>
 
           <div className="social-icons">
