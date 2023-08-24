@@ -7,7 +7,7 @@ function Navbar() {
     <header>
     <div className="navbar">
         <div className="logoClass col-3"> 
-            <img src="./src/images/logo.png" alt="logo" />
+            <img src="https://i.hizliresim.com/4ijkm23.png" alt="logo" />
         </div>
         <div className="navs ">
              <ul>
