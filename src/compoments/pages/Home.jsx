@@ -17,21 +17,21 @@ function Home(props) {
               <img src="https://i.hizliresim.com/1pu0h8v.png" className="d-block w-100" alt="..." />
               <h3 className="bannerText">Beau Monde Salon and Spa</h3>
               <div className="buttonDiv">
-                <button className="siteButton bannerButton">BOOK A VISIT</button>
+                <Link to="/gallery"><button className="siteButton bannerButton">BOOK A VISIT</button></Link>
               </div>
             </div>
             <div className="carousel-item">
-              <img src="https://i.hizliresim.com/1pu0h8v.png" className="d-block w-100" alt="..." />
+              <img src="https://images.fresha.com/locations/location-profile-images/806268/940973/ad801920-3200-4c6d-889e-c91c13b043c2.jpg?class=gallery-modal-small&dpr=2" className="d-block w-100" alt="..." />
               <h3 className="bannerText">Beau Monde Salon and Spa</h3>
               <div className="buttonDiv">
-                <button className="siteButton bannerButton">BOOK A VISIT</button>
+                <Link to="/gallery"><button className="siteButton bannerButton">BOOK A VISIT</button></Link>
               </div>
             </div>
             <div className="carousel-item">
-              <img src="https://i.hizliresim.com/1pu0h8v.png" className="d-block w-100" alt="..." />
+              <img src="https://d1ooscleda9ip9.cloudfront.net/Upload/669/Documents/Blend%20makeup.png" className="d-block w-100" alt="..." />
               <h3 className="bannerText">Beau Monde Salon and Spa</h3>
               <div className="buttonDiv">
-                <button className="siteButton bannerButton">BOOK A VISIT</button>
+                <Link to="/gallery"><button className="siteButton bannerButton">BOOK A VISIT</button></Link>
               </div>
             </div>
           </div>
@@ -39,9 +39,9 @@ function Home(props) {
         </div>
 
         <div>
-          <div className="logo">
-            <div className="logos logo1">
-              <img  src="https://i.hizliresim.com/cn77di1.png" alt="lg" />
+          <div className="logo ">
+            <div className="logos logo1 ">
+              <img src="https://i.hizliresim.com/cn77di1.png" alt="lg" />
             </div>
             <div className="logos logo2">
               <img src="https://i.hizliresim.com/ezmvz21.png" alt="lg2" />
@@ -61,15 +61,15 @@ function Home(props) {
         <div className="container">
           <div className="commentSection row">
             <div className="col">
-            <Comments data={props.data} />
+              <Comments data={props.data} />
             </div>
             <div className="col">
-            <div className="commentTextArea">
-              <h3>Make an Appointment</h3>
-              <br />
-              <p>All of our service providers at Beau Monde Salon and Spa are cotinuosly greatful for the business and support of our wonderful guests. Please reserve an appointment with any of our team members as all of our stylists schedules fill quickly. We do occasionally have last-minute openings, but appointments are recommended.</p>
-              <button className="siteButton bannerButton">MAKE APPOINTMENT</button>
-            </div>
+              <div className="commentTextArea">
+                <h3>Make an Appointment</h3>
+                <br />
+                <p>All of our service providers at Beau Monde Salon and Spa are cotinuosly greatful for the business and support of our wonderful guests. Please reserve an appointment with any of our team members as all of our stylists schedules fill quickly. We do occasionally have last-minute openings, but appointments are recommended.</p>
+                <button className="siteButton bannerButton">MAKE APPOINTMENT</button>
+              </div>
             </div>
           </div>
         </div>

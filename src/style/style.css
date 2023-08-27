@@ -14,6 +14,11 @@ a {
 
 [data-bs-theme=dark] {
   --bs-body-bg: #666666 !important;
+  --bs-tertiary-bg-rgb: 100,100,100 !important;
+}
+
+[data-bs-theme=light] {
+  --bs-tertiary-bg-rgb: 1000,1000,1000 !important;
 }
 
 @font-face {
@@ -48,35 +53,20 @@ footer {
   font-weight: lighter;
 }
 
-.navbar {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: space-around !important;
-  align-items: center;
+.nav-item > a > span {
+  font-size: 15px !important;
+  color: #a31c44 !important;
+  font-family: "bryant-medium" !important;
+  border-right: 1px solid #a31c44 !important;
+  padding: 0 8px !important;
 }
-.navbar .active {
+
+.nav-item > .active span {
   color: #21c1b0 !important;
 }
 
-.navs ul {
-  display: flex;
-  color: #a31c44;
-  -moz-column-gap: 25px;
-       column-gap: 25px;
-}
-
-.navs > ul > li {
-  border-right: 1px solid #a31c44;
-  padding-right: 25px;
-}
-
-.navs > ul > li > a {
-  cursor: pointer;
-}
-
-.navs > ul > li:last-child {
-  border-right: unset;
+.navbar-collapse {
+  justify-content: flex-end !important;
 }
 
 .bannerText {
@@ -129,6 +119,17 @@ footer {
   cursor: pointer;
 }
 
+@media (max-width: 991px) {
+  .nav-item > a > span {
+    border-right: none !important;
+  }
+  .navbar-collapse {
+    justify-content: center !important;
+  }
+  header {
+    padding: 10px 0 !important;
+  }
+}
 .bg-custom {
   background-color: #e4e3e3 !important;
 }
@@ -231,6 +232,10 @@ footer {
   margin-top: 70px;
 }
 
+.bi > a {
+  color: #fff;
+}
+
 header {
   padding: 20px 50px;
 }
@@ -298,19 +303,8 @@ header {
 }
 
 @media (max-width: 991px) {
-  .logoClass img {
-    width: 70%;
-    margin-bottom: 15px;
-  }
-  .navs {
-    margin-top: 4px;
-  }
-  .navs ul {
-    -moz-column-gap: 5px;
-         column-gap: 5px;
-  }
-  .navs > ul > li {
-    margin-right: 10px;
+  .logos img {
+    width: 120%;
   }
   .bannerText {
     font-size: 1.5em;

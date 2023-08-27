@@ -60,21 +60,8 @@ height: 100% !important;
 }
 
 @media (max-width: 991px) {
-  .logoClass img {
-      width: 70%;
-      margin-bottom: 15px;
-  }
-.navs{
-margin-top: 4px;
-}
-  .navs ul {
-      column-gap: 5px;
-
-  }
-
-  .navs > ul > li {
-      margin-right: 10px;
-
+  .logos img {
+    width: 120%;
   }
 
   .bannerText {

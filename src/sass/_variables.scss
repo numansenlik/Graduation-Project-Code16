@@ -4,4 +4,9 @@ $active-color:#21c1b0;
 $bag-color-gray:#e4e3e3;
 [data-bs-theme=dark] {
   --bs-body-bg: #666666 !important;
+  --bs-tertiary-bg-rgb: 100,100,100 !important;
+}
+[data-bs-theme=light] {
+  --bs-tertiary-bg-rgb: 1000,1000,1000 !important;
+
 }
