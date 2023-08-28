@@ -5,17 +5,21 @@ function productsApi() {
 const [data, setData] = useState([]);
 
 async function productsApi() {
-  const options = {
-    method: 'GET',
-    url: 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline',
-  };
-  try {
-    const response = await axios.request(options);
-    await setData(response.data);
-    console.log(response.data.slice(0,32));
-  } catch (error) {
-    console.error(error);
-  }
+    const options = {
+    method:"GET",
+    url:"https://api.jsonbin.io/v3/b/64eca8658e4aa6225ed663e8",
+    headers : {
+      'X-Master-Key': '$2b$10$y27KltbfXk6AnN2x/2rcc.B0x6m6JtZN6F6ASumnsXBvEbZ7Y87FC'
+    }
+    }
+    try {
+      const response = await axios.request(options);
+      await setData(response.data.record);
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  
 }
 
 useEffect(() => {

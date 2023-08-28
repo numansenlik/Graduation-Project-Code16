@@ -3,6 +3,7 @@ import axios from 'axios';
 
 function Products({ data }) {
   const [search, setSearch] = useState('');
+  
 
   return (
     <div className="container">
