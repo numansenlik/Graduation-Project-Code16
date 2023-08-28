@@ -59,6 +59,7 @@ footer {
   font-family: "bryant-medium" !important;
   border-right: 1px solid #a31c44 !important;
   padding: 0 8px !important;
+  padding-right: 20px !important;
 }
 
 .nav-item > .active span {

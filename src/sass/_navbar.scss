@@ -28,12 +28,15 @@
 // .navs>ul>li:last-child {
 //   border-right: unset;
 // }
+
 .nav-item > a >span{
+
 font-size: 15px !important;
 color: $fontThemeColor !important;
 font-family: "bryant-medium" !important;
 border-right: 1px solid $fontThemeColor !important;
 padding: 0 8px !important;
+padding-right: 20px !important;
 }
 .nav-item > .active{
   span{

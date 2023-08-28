@@ -6,7 +6,7 @@ function Products({ data }) {
 
   return (
     <div className="container">
-      <input type="text" class="form-control" placeholder="Search" onChange={(e) => setSearch(e.target.value)} aria-describedby="basic-addon1" />
+      <input type="text" className="form-control" placeholder="Search" onChange={(e) => setSearch(e.target.value)} aria-describedby="basic-addon1" />
       <h1 className="my-4 text-center">Products</h1>
       <div className="row">
         {data.slice(0, 32).filter((item) => {
