@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import Comments from '../contact/Comments';
 import handleSubmit from '../../../customHooks/contacts/handleSubmit';
+import { ToastContainer } from 'react-toastify';
 
 function Contact(props) {
   console.log(props);
@@ -46,7 +47,7 @@ function Contact(props) {
               <div className="mb-3">
                 <button type="submit" className="btn btn-primary p-2">Submit</button>
               </div>
-
+            <ToastContainer/>
             </form>
           </div>
 

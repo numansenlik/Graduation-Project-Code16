@@ -363,25 +363,4 @@ header {
 
 .headers {
   text-align: center;
-}
-
-.imageTextSection {
-  display: flex;
-  margin: 0 auto;
-  padding: 50px 0;
-  width: 90%;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
-}
-.imageTextSection img {
-  width: 50%;
-  border-radius: 10px;
-}
-
-.write {
-  margin: auto 0;
-  text-align: center;
-  letter-spacing: 1px;
-  font-weight: 300;
-  line-height: 2;
 }/*# sourceMappingURL=style.css.map */
