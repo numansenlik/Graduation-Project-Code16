@@ -4,6 +4,7 @@ import Comments from '../contact/Comments';
 import handleSubmit from '../../../customHooks/contacts/handleSubmit';
 import SendMail from './SendMail';
 
+
 function Contact(props) {
   const [data, setData] = useState(props.data);
 

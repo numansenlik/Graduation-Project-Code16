@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const SendMail = () => {
   const initialValues = {
     email: '',
@@ -23,7 +24,7 @@ const SendMail = () => {
     return errors;
   };
 
-  const handleSubmit = async (values, { setSubmitting , resetForm }) => {
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     console.log('Submitted Values:', values);
     try {
       const response = await fetch("https://v1.nocodeapi.com/numan16/google_sheets/iSVAOxhVAQIJrubi?tabId=Sayfa1", {
@@ -35,8 +36,9 @@ const SendMail = () => {
       }
       )
       await response.json()
-
+      await toast.success('Form successfully submitted!');
     } catch (error) {
+      await toast.error('An error occurred while submitting the form.');
       console.log(error);
     }
     setSubmitting(false);
@@ -45,7 +47,7 @@ const SendMail = () => {
 
   return (
     <div className='row'>
-      <div className='mx-auto col-7' >
+      <div className='mx-auto col-md-7' >
         <h2 className='text-center'>Get in Touch With Us</h2>
         <Formik initialValues={initialValues} onSubmit={handleSubmit} validate={validate}>
           {({ isSubmitting }) => (
@@ -68,6 +70,7 @@ const SendMail = () => {
             </Form>
           )}
         </Formik>
+        <ToastContainer />
       </div>
     </div>
   );
