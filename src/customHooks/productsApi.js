@@ -5,7 +5,7 @@ function productsApi() {
 const [data, setData] = useState([]);
 
 async function productsApi() {
-    const options = {
+  const options = {
     method:"GET",
     url:"https://api.jsonbin.io/v3/b/64eca8658e4aa6225ed663e8",
     headers : {
@@ -19,7 +19,6 @@ async function productsApi() {
     } catch (error) {
       console.error(error);
     }
-  
 }
 
 useEffect(() => {

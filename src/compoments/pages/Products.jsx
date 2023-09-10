@@ -15,10 +15,11 @@ function Products({ data }) {
         }).map((item, index) => (
           <div key={index} className="col-md-3 mb-3">
             <div className="card">
-              <img alt={"..."} src={item.image_link} className="card-img-top bg-dark" />
+              <img alt={"product"} src={item.image450} className="card-img-top p-4" />
               <div className="card-body">
-                <h5 className="card-title ">{item.name}</h5>
-                <p className="card-text ">{`${item.price} $`}</p>
+                <h5 className="card-title ">{item.brandName}</h5>
+                <p className='card-text'>{item.displayName}</p>
+                <p className="card-text ">{`${item.currentSku.listPrice.substring(1, 6)} $`}</p>
               </div>
 
             </div>
