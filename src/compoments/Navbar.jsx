@@ -1,9 +1,10 @@
-import React from 'react'
+import { useContext } from 'react'
+import { UserContext } from '../context/UserContext'
 import { NavLink } from 'react-router-dom'
 import Themeicon from './Themeicon'
-import Fav from './pages/Fav'
 
-function Navbar({user, handleLogout}) {
+function Navbar() {
+  const {user, handleLogout} = useContext( UserContext )
   return (
     <header>
 

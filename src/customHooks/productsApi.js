@@ -7,9 +7,9 @@ const [data, setData] = useState([]);
 async function productsApi() {
   const options = {
     method:"GET",
-    url:"https://api.jsonbin.io/v3/b/64eca8658e4aa6225ed663e8",
+    url:import.meta.env.VITE_PRODUCT_GET_API,
     headers : {
-      'X-Master-Key': '$2b$10$y27KltbfXk6AnN2x/2rcc.B0x6m6JtZN6F6ASumnsXBvEbZ7Y87FC'
+      'X-Master-Key': `${"$2b$10$y27KltbfXk6AnN2x"+import.meta.env.VITE_CONTACT_GET_API_MASTER}`
     }
     }
     try {

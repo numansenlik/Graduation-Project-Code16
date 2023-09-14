@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Comments from '../contact/Comments';
 import handleSubmit from '../../../customHooks/contacts/handleSubmit';
 import SendMail from './SendMail';
+import { ContactContext } from '../../../context/ContactContext';
 
 
-function Contact(props) {
-  const [data, setData] = useState(props.data);
-
+function Contact() {
+  const { data, isActive, setData } = useContext(ContactContext)
   async function putData(values, { resetForm }) {
     const newData = await handleSubmit(values, data);
     setData(newData);
-    props.setData(newData);
-    resetForm(); 
+    resetForm();
   }
 
   useEffect(() => {
-    setData(props.data);
-  }, [props.isActive]);
+    setData(data);
+  }, [isActive]);
 
   const validateForm = (values) => {
     let errors = {};
@@ -50,7 +49,7 @@ function Contact(props) {
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-5 offset-md-1">
-          {props.isActive ? <Comments data={data} /> : <h1>Loading...</h1>}
+          {isActive ? <Comments data={data} /> : <h1>Loading...</h1>}
         </div>
         <div className="col-md-5">
           <Formik

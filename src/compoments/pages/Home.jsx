@@ -1,11 +1,12 @@
-import React from 'react'
+import {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import Comments from './contact/Comments'
+import { ContactContext } from '../../context/ContactContext'
 
-function Home(props) {
+function Home() {
+  const {data} = useContext(ContactContext)
   return (
     <>
-    <h1>{import.meta.env.VITE_FIRE_BASE_PROJECT_ID} merhaba</h1>
       <div className="HomeBannerSection col-24">
         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-indicators">
@@ -62,7 +63,7 @@ function Home(props) {
         <div className="container">
           <div className="commentSection row">
             <div className="col">
-              <Comments data={props.data} />
+              <Comments data={data} />
             </div>
             <div className="col">
               <div className="commentTextArea">

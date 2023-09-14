@@ -1,6 +1,9 @@
 import { Navigate } from "react-router-dom"
+import { useContext } from 'react'
+import { UserContext } from '../context/UserContext'
 
-function PrivateRoutes({user,children}) {
+function PrivateRoutes({children}) {
+  const {user} = useContext( UserContext )
   if (!user?.id) {
     return(<Navigate to="/login" replace/>)
   }

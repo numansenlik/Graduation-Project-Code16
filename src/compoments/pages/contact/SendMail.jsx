@@ -27,7 +27,7 @@ const SendMail = () => {
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     console.log('Submitted Values:', values);
     try {
-      const response = await fetch("https://v1.nocodeapi.com/numan16/google_sheets/iSVAOxhVAQIJrubi?tabId=Sayfa1", {
+      const response = await fetch(import.meta.env.VITE_SEND_MAIL_API, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

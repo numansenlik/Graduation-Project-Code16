@@ -1,4 +1,6 @@
+import { toast } from 'react-toastify';
 import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIRE_BASE_API_KEY,
@@ -10,3 +12,36 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+
+export const register = async (email, password) => {
+  try {
+    await createUserWithEmailAndPassword(auth, email, password)
+  } catch (error) {
+    toast.error("There's been an issue.");
+  }
+  
+}
+export const login = async (email, password) => {
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+    toast.success("You have successfully logged in.");
+    return user;
+  } catch (error) {
+    toast.error("Login failed. Please check your email and password.");
+  }
+};
+export const logOut = async () =>{
+  try {
+    const {user} = await signOut(auth)
+    return true
+  } catch (error) {
+    toast.error(error.message)
+  }
+
+} 
+
+
+
+export default app

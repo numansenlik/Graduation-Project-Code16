@@ -4,12 +4,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function contacsPutApi(newData) {
   const data = newData
-    fetch("https://api.jsonbin.io/v3/b/64dad76a9d312622a3914d1e", {
+    fetch(import.meta.env.VITE_CONTACT_PUT_API, {
       method: "PUT",
       body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
-        'X-Master-Key': "$2b$10$y27KltbfXk6AnN2x/2rcc.B0x6m6JtZN6F6ASumnsXBvEbZ7Y87FC"
+        'X-Master-Key': `${"$2b$10$y27KltbfXk6AnN2x"+import.meta.env.VITE_CONTACT_GET_API_MASTER}`
       }
     })
       .then(res => res.json())

@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect, useContext } from 'react';
+import { ProductsDataContext } from '../../context/ProductsDataContext';
 
-function Products({ data }) {
+function Products() {
+  const { data } = useContext( ProductsDataContext );
   const [search, setSearch] = useState('');
-  
-
   return (
     <div className="container">
       <input type="text" className="form-control" placeholder="Search" onChange={(e) => setSearch(e.target.value)} aria-describedby="basic-addon1" />
       <h1 className="my-4 text-center">Products</h1>
       <div className="row">
         {data.slice(0, 32).filter((item) => {
-        return search.toLocaleLowerCase() === '' ? item : item.name.toLocaleLowerCase().includes(search);
+          return search.trim().toLocaleLowerCase() === '' ? item : item.displayName.toLocaleLowerCase().includes(search);
         }).map((item, index) => (
           <div key={index} className="col-md-3 mb-3">
             <div className="card">

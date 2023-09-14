@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { login, register } from '../../customHooks/fireBase/fireBase';
+import { useContext } from 'react'
+import { UserContext } from '../../context/UserContext';
 
-function UserLogin({handleLogin:handleLoginn}) {
+function UserLogin() {
+  const {handleLogin:handleLoginn} = useContext( UserContext )
   const [showLogin, setShowLogin] = useState(true);
   const [formData, setFormData] = useState({
     email: '',
@@ -50,7 +54,10 @@ function UserLogin({handleLogin:handleLoginn}) {
     }
 
     if (showLogin) {
-      handleLoginn();
+      
+      const user = await login(formData.email,formData.password)
+      console.log(user);
+      handleLoginn()
       // İstediğiniz giriş mantığını burada uygulayabilirsiniz
     } else {
       if (formData.password !== formData.confirmPassword) {
@@ -59,7 +66,8 @@ function UserLogin({handleLogin:handleLoginn}) {
       }
       console.log('Form Data:', formData);
       // Kayıt işlemi kodunu burada uygulayabilirsiniz
-
+      const user = await register(formData.email,formData.password)
+      console.log(user);
       // Kayıt işlemi tamamlandığında formu sıfırlıyoruz
       setFormData({
         email: '',
