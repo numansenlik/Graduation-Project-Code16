@@ -6,11 +6,12 @@ function contactsGetApi() {
   const [isActive,setIsActive] = useState(false);
 
 async function getData() {
+console.log(import.meta.env.VITE_CONTACT_GET_API_MASTER);
   const options = {
   method:"GET",
-  url:"https://api.jsonbin.io/v3/b/64dad76a9d312622a3914d1e",
+  url:import.meta.env.VITE_CONTACT_GET_API,
   headers : {
-    'X-Master-Key': '$2b$10$y27KltbfXk6AnN2x/2rcc.B0x6m6JtZN6F6ASumnsXBvEbZ7Y87FC'
+    'X-Master-Key': `${"$2b$10$y27KltbfXk6AnN2x"+import.meta.env.VITE_CONTACT_GET_API_MASTER1}`
   }
   }
   try {

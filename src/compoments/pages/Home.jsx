@@ -5,6 +5,7 @@ import Comments from './contact/Comments'
 function Home(props) {
   return (
     <>
+    <h1>{import.meta.env.VITE_FIRE_BASE_PROJECT_ID} merhaba</h1>
       <div className="HomeBannerSection col-24">
         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-indicators">
