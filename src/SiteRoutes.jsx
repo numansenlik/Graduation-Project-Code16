@@ -8,7 +8,10 @@ import { Route, Routes } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
 import productsApi from './customHooks/productsApi'
 import contactsGetApi from './customHooks/contacts/contactsGetApi'
-function SiteRoutes() {
+import UserLogin from './compoments/user/UserLogin'
+import Fav from './compoments/pages/Fav'
+import PrivateRoutes from './compoments/PrivateRoutes'
+function SiteRoutes({handleLogin, user}) {
 const productsData = productsApi();
 const [data,isActive,setData] = contactsGetApi();
   return (
@@ -18,7 +21,9 @@ const [data,isActive,setData] = contactsGetApi();
     <Route path="/contact" element={<Contact data = {data} isActive={isActive} setData={setData} />}/>
     <Route path="/gallery" element={<Gallery/>}/>
     <Route path="/products" element={<Products data={productsData}/>}/>
-    <Route path="/services" element={<Services/>}/>
+    <Route path="/services" element={<Services/>} />
+    <Route path="/login" element={<UserLogin handleLogin={handleLogin}/>}/>
+    <Route path="/fav" element={<PrivateRoutes user={user}><Fav /></PrivateRoutes>}/>
   </Routes>
   )
 }

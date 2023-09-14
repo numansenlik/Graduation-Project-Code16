@@ -41,7 +41,7 @@ function Home(props) {
         <div>
           <div className="logo ">
             <div className="logos logo1 ">
-              <img src="https://i.hizliresim.com/cn77di1.png" alt="lg" />
+            <img src="https://i.hizliresim.com/cn77di1.png" alt="lg" />
             </div>
             <div className="logos logo2">
               <img src="https://i.hizliresim.com/ezmvz21.png" alt="lg2" />

@@ -1,8 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Themeicon from './Themeicon'
+import Fav from './pages/Fav'
 
-function Navbar() {
+function Navbar({user, handleLogout}) {
   return (
     <header>
 
@@ -24,6 +25,16 @@ function Navbar() {
             <li className='nav-item'><NavLink className="nav-link" to="/products"><span>Products</span></NavLink></li>
             <li className='nav-item'><NavLink className="nav-link" to="/gallery"><span>Gallery</span></NavLink></li>
             <li className='nav-item'><NavLink className="nav-link" to="/contact"><span>Contact</span></NavLink></li>
+            {user && <li className='nav-item'><NavLink className="nav-link" to="/fav" ><span>Favorites</span></NavLink></li>}
+            {
+            user ?<>
+            <li className='nav-item'><button className="nav-link" onClick={handleLogout}><span>LogOut</span></button></li>
+            
+            </>
+            :
+            <li className='nav-item'><NavLink className="nav-link" to="/login"><span>Login</span></NavLink></li>
+          }
+            
             <li className='nav-item'><NavLink className='nav-link' to="#"><Themeicon /></NavLink></li>
           </ul>
           </div>

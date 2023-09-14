@@ -53,7 +53,7 @@ footer {
   font-weight: lighter;
 }
 
-.nav-item > a > span {
+.nav-item span {
   font-size: 15px !important;
   color: #a31c44 !important;
   font-family: "bryant-medium" !important;
@@ -62,8 +62,12 @@ footer {
   padding-right: 20px !important;
 }
 
-.nav-item > .active span {
+.nav-item .active span {
   color: #21c1b0 !important;
+}
+
+.nav-item > button > span {
+  color: rgb(97, 5, 5) !important;
 }
 
 .navbar-collapse {
@@ -121,7 +125,7 @@ footer {
 }
 
 @media (max-width: 991px) {
-  .nav-item > a > span {
+  .nav-item span {
     border-right: none !important;
   }
   .navbar-collapse {
