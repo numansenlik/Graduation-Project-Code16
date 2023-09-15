@@ -6,10 +6,9 @@ const FavProductContext = createContext();
 function FavProductContextProvider({ children }) {
   const { data } = useContext(ProductsDataContext)
   const [userFavProduct, setUserFavProduct] = useState([]);
-  const [favButtonStates, setFavButtonStates] = useState({}); // Her ürün için Fav düğme durumlarını saklar
+  const [favButtonStates, setFavButtonStates] = useState({}); 
 
   useEffect(() => {
-    // Her ürün için başlangıçta Fav düğmesi kapalı (false) olacak şekilde başlatın
     const initialButtonStates = {};
     data.slice(0, 32).forEach((item) => {
       initialButtonStates[item.productId] = false;
@@ -18,9 +17,7 @@ function FavProductContextProvider({ children }) {
   }, [data]);
 
   const handleSubmitFav = (item) => {
-    // Favori ürünleri saklamak için state'i güncelleyin
     setUserFavProduct((prevFavs) => [...prevFavs, item.productId]);
-    // Fav düğmesini etkinleştirin (true yapın)
     setFavButtonStates((prevButtonStates) => ({
       ...prevButtonStates,
       [item.productId]: true,
@@ -28,9 +25,7 @@ function FavProductContextProvider({ children }) {
   }
 
   const handleRemoveFav = (item) => {
-    // Favori ürünleri saklamak için state'i güncelleyin
     setUserFavProduct((prevFavs) => prevFavs.filter((productId) => productId !== item.productId));
-    // Fav düğmesini devre dışı bırakın (false yapın)
     setFavButtonStates((prevButtonStates) => ({
       ...prevButtonStates,
       [item.productId]: false,
