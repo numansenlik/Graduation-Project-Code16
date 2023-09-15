@@ -12,13 +12,13 @@ function UserLogin() {
       <div className="container">
         <div className="row">
           <button
-            className={`btn btn-light col-md-4 offset-md-2 py-2 ${showLogin ? 'active' : ''}`}
+            className={`btn btn-light col-md-4 offset-md-2 p-2 ${showLogin ? 'active' : ''}`}
             onClick={handleLogin}
           >
             Sign In
           </button>
           <button
-            className={`btn btn-light col-md-4 py-2 ${showLogin ? '' : 'active'}`}
+            className={`btn btn-light col-md-4 p-2 ${showLogin ? '' : 'active'}`}
             onClick={handleRegister}
           >
             Sign Up
