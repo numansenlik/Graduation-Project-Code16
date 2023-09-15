@@ -17,7 +17,6 @@ async function getData() {
     const response = await axios.request(options);
     await setData(response.data.record);
     await setIsActive(true)
-    console.log(response.data);
   } catch (error) {
     console.error(error);
   }
