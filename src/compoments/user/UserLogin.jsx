@@ -1,82 +1,11 @@
-import React, { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { login, register } from '../../customHooks/fireBase/fireBase';
 import { useContext } from 'react'
 import { UserContext } from '../../context/UserContext';
 
 function UserLogin() {
-  const {handleLogin:handleLoginn} = useContext( UserContext )
-  const [showLogin, setShowLogin] = useState(true);
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    confirmPassword: '',
-    message: ''
-  });
+  const { handleLogin, handleRegister, handleChange, handleSubmit, showLogin, formData } = useContext(UserContext)
 
-  const handleLogin = () => {
-    setShowLogin(true);
-  };
-
-  const handleRegister = () => {
-    setShowLogin(false);
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const validateEmail = (email) => {
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    return emailRegex.test(email);
-  };
-
-  const validatePassword = (password) => {
-    return password.length >= 6;
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!validateEmail(formData.email)) {
-      toast.error('Geçersiz e-posta adresi.');
-      return;
-    }
-
-    if (!validatePassword(formData.password)) {
-      toast.error('Şifre en az 6 karakter olmalıdır.');
-      return;
-    }
-
-    if (showLogin) {
-      
-      const user = await login(formData.email,formData.password)
-      console.log(user);
-      handleLoginn()
-      // İstediğiniz giriş mantığını burada uygulayabilirsiniz
-    } else {
-      if (formData.password !== formData.confirmPassword) {
-        toast.error('Şifreler uyuşmuyor.');
-        return;
-      }
-      console.log('Form Data:', formData);
-      // Kayıt işlemi kodunu burada uygulayabilirsiniz
-      const user = await register(formData.email,formData.password)
-      console.log(user);
-      // Kayıt işlemi tamamlandığında formu sıfırlıyoruz
-      setFormData({
-        email: '',
-        password: '',
-        confirmPassword: '',
-        message: 'Kayıt başarıyla tamamlandı.',
-      });
-    }
-  };
 
   return (
     <>

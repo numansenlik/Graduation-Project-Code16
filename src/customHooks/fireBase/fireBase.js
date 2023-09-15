@@ -17,10 +17,11 @@ const auth = getAuth();
 export const register = async (email, password) => {
   try {
     await createUserWithEmailAndPassword(auth, email, password)
+    toast.success("Registration successful")
   } catch (error) {
     toast.error("There's been an issue.");
   }
-  
+
 }
 export const login = async (email, password) => {
   try {
@@ -32,15 +33,16 @@ export const login = async (email, password) => {
     toast.error("Login failed. Please check your email and password.");
   }
 };
-export const logOut = async () =>{
+export const logOut = async () => {
   try {
-    const {user} = await signOut(auth)
+    await signOut(auth)
+    toast.success("Logged out successfully")
     return true
   } catch (error) {
-    toast.error(error.message)
+    toast.error("Logout failed")
   }
 
-} 
+}
 
 
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Comments from '../contact/Comments';
 import handleSubmit from '../../../customHooks/contacts/handleSubmit';
@@ -7,16 +7,9 @@ import { ContactContext } from '../../../context/ContactContext';
 
 
 function Contact() {
-  const { data, isActive, setData } = useContext(ContactContext)
-  async function putData(values, { resetForm }) {
-    const newData = await handleSubmit(values, data);
-    setData(newData);
-    resetForm();
-  }
+  const { data, isActive, putData } = useContext(ContactContext)
 
-  useEffect(() => {
-    setData(data);
-  }, [isActive]);
+
 
   const validateForm = (values) => {
     let errors = {};
@@ -49,7 +42,15 @@ function Contact() {
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-5 offset-md-1">
-          {isActive ? <Comments data={data} /> : <h1>Loading...</h1>}
+          {isActive ? <Comments data={data} /> :
+            <p className="card-text placeholder-glow">
+              <span className="placeholder col-7" />
+              <span className="placeholder col-4" />
+              <span className="placeholder col-4" />
+              <span className="placeholder col-6" />
+              <span className="placeholder col-8" />
+            </p>
+          }
         </div>
         <div className="col-md-5">
           <Formik

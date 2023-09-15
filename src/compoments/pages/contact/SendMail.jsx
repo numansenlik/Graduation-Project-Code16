@@ -25,7 +25,6 @@ const SendMail = () => {
   };
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
-    console.log('Submitted Values:', values);
     try {
       const response = await fetch(import.meta.env.VITE_SEND_MAIL_API, {
         method: 'POST',
@@ -39,7 +38,6 @@ const SendMail = () => {
       await toast.success('Form successfully submitted!');
     } catch (error) {
       await toast.error('An error occurred while submitting the form.');
-      console.log(error);
     }
     setSubmitting(false);
     resetForm();

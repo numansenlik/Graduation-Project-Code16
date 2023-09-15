@@ -14,7 +14,7 @@ function SiteRoutes() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/meetourteam" element={<MeetOurTeam />} />
-      <Route path="/contact" element={<Contact/>} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/products" element={<Products />} />
       <Route path="/services" element={<Services />} />

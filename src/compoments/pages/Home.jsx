@@ -1,10 +1,10 @@
-import {useContext} from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Comments from './contact/Comments'
 import { ContactContext } from '../../context/ContactContext'
 
 function Home() {
-  const {data} = useContext(ContactContext)
+  const { data, isActive } = useContext(ContactContext)
   return (
     <>
       <div className="HomeBannerSection col-24">
@@ -43,7 +43,7 @@ function Home() {
         <div>
           <div className="logo ">
             <div className="logos logo1 ">
-            <img src="https://i.hizliresim.com/cn77di1.png" alt="lg" />
+              <img src="https://i.hizliresim.com/cn77di1.png" alt="lg" />
             </div>
             <div className="logos logo2">
               <img src="https://i.hizliresim.com/ezmvz21.png" alt="lg2" />
@@ -52,7 +52,7 @@ function Home() {
               <img src="https://i.hizliresim.com/8ebj7k2.png" alt="lg3" />
             </div>
           </div>
-          <div className="write2">
+          <div className="write2 mb-2">
             <p>We are proud to be recognized as a Redken Elite Black Status Salon.
               Our team has advanced training from the top artist in the industry.</p>
             <Link to={"/products"}><button className="siteButton bannerButton">GET PRODUCTS</button></Link>
@@ -63,7 +63,15 @@ function Home() {
         <div className="container">
           <div className="commentSection row">
             <div className="col">
-              <Comments data={data} />
+              {isActive ? <Comments data={data} /> :
+                <p className="card-text placeholder-glow">
+                  <span className="placeholder col-7" />
+                  <span className="placeholder col-4" />
+                  <span className="placeholder col-4" />
+                  <span className="placeholder col-6" />
+                  <span className="placeholder col-8" />
+                </p>
+              }
             </div>
             <div className="col">
               <div className="commentTextArea">

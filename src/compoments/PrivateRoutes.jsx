@@ -4,7 +4,7 @@ import { UserContext } from '../context/UserContext'
 
 function PrivateRoutes({children}) {
   const {user} = useContext( UserContext )
-  if (!user?.id) {
+  if (!user) {
     return(<Navigate to="/login" replace/>)
   }
   return children

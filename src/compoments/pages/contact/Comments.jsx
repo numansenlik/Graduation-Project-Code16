@@ -1,8 +1,10 @@
-import React from 'react'
+import { useContext } from 'react';
+import { ContactContext } from '../../../context/ContactContext';
+import { UserContext } from '../../../context/UserContext';
 
 function Comments(props) {
-  const data = props.data
-  console.log(data);
+  const { data, deleteCommentById } = useContext(ContactContext);
+  const { isAdmin } = useContext(UserContext);
   return (
     <>
       <div id="carouselExampleCaptions" className="carousel slide text-dark">
@@ -19,6 +21,7 @@ function Comments(props) {
                 <p>{item.comment.text}</p>
                 <img src="https://i.hizliresim.com/9z3w5lx.png" className="message-right" alt="message treatment" />
                 <span className="commentCustomerName  float-end fs-6 pt-5">- {item.name}</span>
+                {isAdmin && <button className="btn btn-danger position-absolute bottom-0 end-50" onClick={() => deleteCommentById(item.id)}>Delete</button>}
               </div>
             </div>
           ))}
