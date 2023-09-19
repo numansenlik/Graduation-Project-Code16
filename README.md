@@ -5,7 +5,7 @@
 
 ## Project Overview
 
-This project is the culmination of the Code16 Frontend Bootcamp and serves as a graduation project to successfully complete the bootcamp. The development of this project was carried out in collaboration with the Bursa Metropolitan Municipality as part of an event, with design work conducted in cooperation with a professional designer.
+This project is a graduation project developed within the scope of the Code16 Frontend Bootcamp, created to successfully complete the bootcamp. The project was developed in collaboration with Bursa Metropolitan Municipality and Kodluyoruz as part of an event.
 
 ## Project Description
 
