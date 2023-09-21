@@ -10,15 +10,15 @@ function UserLogin() {
   return (
     <>
       <div className="container">
-        <div className="row">
+        <div className="row my-3">
           <button
-            className={`btn btn-light col-md-4 offset-md-2 p-2 ${showLogin ? 'active' : ''}`}
+            className={`btn btn-light col-md-4 offset-md-2 padding-2 ${showLogin ? 'active' : ''}`}
             onClick={handleLogin}
           >
             Sign In
           </button>
           <button
-            className={`btn btn-light col-md-4 p-2 ${showLogin ? '' : 'active'}`}
+            className={`btn btn-light col-md-4 padding-2 ${showLogin ? '' : 'active'}`}
             onClick={handleRegister}
           >
             Sign Up
@@ -91,7 +91,7 @@ function UserLogin() {
                 )}
 
                 <div>
-                  <button className="btn btn-primary p-2" type="submit">
+                  <button className="btn btn-primary padding-2" type="submit">
                     {showLogin ? 'Login' : 'Register'}
                   </button>
                 </div>

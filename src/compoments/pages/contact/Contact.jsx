@@ -134,7 +134,7 @@ function Contact() {
                   <ErrorMessage name="comment" component="div" className="text-danger" />
                 </div>
                 <div className="mb-3">
-                  <button type="submit" className="btn btn-primary p-2">
+                  <button type="submit" className="btn btn-primary padding-2">
                     Submit
                   </button>
                 </div>

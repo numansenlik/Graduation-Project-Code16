@@ -61,7 +61,7 @@ const SendMail = () => {
                 <ErrorMessage name="message" component="div" className="text-danger" />
               </div>
               <div>
-                <button className="btn btn-primary p-2" type="submit" disabled={isSubmitting}>
+                <button className="btn btn-primary padding-2" type="submit" disabled={isSubmitting}>
                   Send
                 </button>
               </div>
