@@ -1,6 +1,6 @@
 import SiteRoutes from './SiteRoutes'
-import Navbar from './compoments/Navbar'
-import Footer from './compoments/Footer'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 function App() {
 

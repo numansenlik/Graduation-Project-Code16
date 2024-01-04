@@ -1,13 +1,13 @@
-import Home from './compoments/pages/Home'
-import MeetOurTeam from './compoments/pages/MeetOurTeam'
-import Contact from './compoments/pages/contact/Contact'
-import Gallery from './compoments/pages/Gallery'
-import Products from './compoments/pages/Products'
-import Services from './compoments/pages/Services'
+import Home from './components/pages/Home'
+import MeetOurTeam from './components/pages/MeetOurTeam'
+import Contact from './components/pages/contact/Contact'
+import Gallery from './components/pages/Gallery'
+import Products from './components/pages/Products'
+import Services from './components/pages/Services'
 import { Route, Routes } from 'react-router-dom'
-import UserLogin from './compoments/user/UserLogin'
-import Fav from './compoments/pages/Fav'
-import PrivateRoutes from './compoments/PrivateRoutes'
+import UserLogin from './components/user/UserLogin'
+import Fav from './components/pages/Fav'
+import PrivateRoutes from './components/PrivateRoutes'
 function SiteRoutes() {
 
   return (
