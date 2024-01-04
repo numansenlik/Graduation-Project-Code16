@@ -15,12 +15,10 @@ This project is a graduation project developed within the scope of the Code16 Fr
 - Context API (I used Context API for state management because my project is not large and comprehensive, and it doesn't require an elaborate data management system.)
 - Custom Hooks
 - React Hooks
-- Navigator
 - React Router
 - Private Routes
 - .env
 - Toast
-- Link
 
 ### Key Features
 
